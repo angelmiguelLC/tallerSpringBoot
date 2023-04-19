@@ -41,6 +41,10 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 
+	
+	public User updateUserById(User user) {
+		return userRepository.save(user);
+	}
 
 
 

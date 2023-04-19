@@ -41,9 +41,6 @@ public class UserRestController {
 		return new ResponseEntity<User>(usuario.get(), HttpStatus.OK);
 	}
 	
-	
-	
-	
 
 	@PostMapping("usuarios/{id}")
 	public ResponseEntity<User> createUser(@PathVariable("id") User user){		
@@ -53,6 +50,10 @@ public class UserRestController {
 	}
 	
 	
+	@PutMapping(value= "usuarios/")
+	public User updateUser(@RequestBody User user) {
+		return userService.save(user);
+	}
 	
 	
 	
