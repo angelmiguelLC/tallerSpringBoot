@@ -1,4 +1,4 @@
-package es.bootcamp.pruebaMsSpringboot.service;
+package es.bootcamp.pruebaMsSpringboot.message;
 
 public interface MessageService {
 

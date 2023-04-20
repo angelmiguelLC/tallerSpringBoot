@@ -1,10 +1,16 @@
 package es.bootcamp.pruebaMsSpringboot.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import es.bootcamp.pruebaMsSpringboot.model.User;
 
-public interface UserRepository extends JpaRepository<User, Integer> {
+@Repository
+public interface UsuarioRepositorio extends JpaRepository<User, Integer> {
+	
+	public List<User> findAll();
 	
 	public User findUserById(Integer id);
 	
@@ -12,6 +18,4 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	
 	public void delete(User user);
 	
-	
-
 }

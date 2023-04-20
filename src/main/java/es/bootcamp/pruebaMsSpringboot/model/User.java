@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "usuarios")
@@ -16,31 +17,27 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(name = "name")
+
+	@Column(name = "nombre")
 	private String name;
 	
-	@Column(name = "birthdate")
+	@Column(name = "cumple")
 	private LocalDate birthDate;
 	
 	
 	
-	public User() {
-		super();
-	}
 	
-	public User(Integer id, String name, LocalDate birthDate) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.birthDate = birthDate;
+	public void User() {
+		
 	}
-	
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
+
 	public String getName() {
 		return name;
 	}
@@ -52,6 +49,11 @@ public class User {
 	}
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", birthDate=" + birthDate + "]";
 	}
 	
 	

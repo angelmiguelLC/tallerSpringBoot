@@ -1,12 +1,13 @@
-package es.bootcamp.pruebaMsSpringboot.repository;
+package es.bootcamp.pruebaMsSpringboot.message;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import es.bootcamp.pruebaMsSpringboot.service.MessageService;
-
 @Service
 public class MessageRepository implements MessageService {
+	
+	@Autowired
 	@Value("${course.message:${course.defaultMessage}}")
 	private String message;
 

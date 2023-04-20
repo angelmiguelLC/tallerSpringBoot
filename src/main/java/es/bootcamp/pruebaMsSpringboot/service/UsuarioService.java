@@ -1,16 +1,17 @@
 package es.bootcamp.pruebaMsSpringboot.service;
 
+
 import java.util.List;
 
 import es.bootcamp.pruebaMsSpringboot.model.User;
 
-public interface UserService {
+public interface UsuarioService {
 
 	public List<User> findAll();
-	public User findUserById(int id);
 	public User save(User user);
-	public User delete(User user);
-	public User updateUserById(User user);
+	public User findUserById(Integer id);
+	public User updateUser(User user);
+	public void delete(int id);
 	
-	//public User updateUser(User user);
+
 }
