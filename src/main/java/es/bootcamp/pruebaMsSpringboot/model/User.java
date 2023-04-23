@@ -21,7 +21,7 @@ public class User {
 	@Column(name = "nombre")
 	private String name;
 	
-	@Column(name = "cumple")
+	@Column(name = "fechaNacimiento")
 	private LocalDate birthDate;
 	
 	
