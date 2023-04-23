@@ -28,7 +28,6 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public User save(User user) {
-		user.setName(user.getName());
 		return userRepository.save(user);
 	}
 
@@ -42,44 +41,4 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public User updateUser(User user) {		
 		return userRepository.save(user);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-/*
-	@Override
-	public List<User> findAll() {
-
-		return userRepository.findAll();
-	}
-
-	@Override
-	public User findUserById(int id) {
-		Optional<User> usuario = userRepository.findById(id);
-		return usuario.get();
-	}
-
-	@Override
-	public User save(User user) {
-		userRepository.save(user);
-		return user;
-	}
-	
-	
-	public User updateUserById(User user) {
-		return userRepository.save(user);
-	}
-
-*/
 }
